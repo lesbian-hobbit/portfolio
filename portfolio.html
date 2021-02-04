@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+body{
+	margin:0;
+    font-family: Papyrus;
+    background: #cccccc;
+}
+.header {
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(to bottom, #cc33ff 0%, #ff99ff 100%);
+  color: white;
+  text-shadow: 2px 2px black;
+  overflow: auto;
+}
+.menu {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: linear-gradient(to bottom, #cc33ff 0%, #ff99ff 100%);
+  border-radius: 10px;
+  border: 2px solid #cc33ff 0%, #ff99ff 100%;
+  text-shadow: 2px 2px black;
+  overflow: auto;
+	}
+.menu a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;  
+  border-radius: 20px;
+  border: 2px solid white;
+  background: linear-gradient(to bottom, #cc33ff 0%, #ff99ff 100%);
+}
+.menu a.right {
+  float: right;
+  border-radius: 20px;
+  border: 2px white;
+}
+.menu a:hover {
+  background-color: blue;
+  color: black;
+ 
+  
+}
+.bodys {
+-ms-flex: 70%;  flex: 70%;
+  padding: 200px;
+  background: linear-gradient(to bottom, #cc33ff 0%, #ff99ff 100%);
+  font-size: 20px;
+  color: white;
+text-shadow: 2px 2px black;
+overflow: auto;
+height: 100%;
+}
+.project-tile:hover{
+  width: 450px;
+  height: 450px;
+}
+.project-tile {
+  float: left;
+  clear: left;
+  background: rgb(0, 0, 0)
+  background: rgba(0, 0, 0, 0.5);
+  padding: 100px;
+  width: 30%;
+  height: 100;
+  color: black;
+  font-family: arial;
+  border-radius: 20px;
+  border: 2px solid grey;
+  border-style: outset;
+  margin-right: 150px;
+  margin-left: 80px;
+  box-shadow: 10px 10px;
+  transition: width 4s, height 4s;
+  overflow: auto;
+
+  }
+ .right {
+  float: right;
+  clear: right;
+  background: rgb(0, 0, 0)
+  background: rgba(0, 0, 0, 0.5);
+  padding: 100px;
+  width: 30%;
+  height: 140;
+  color: black;
+  font-family: arial;
+  border-radius: 20px;
+  border: 2px solid grey;
+  border-style: outset;
+  margin-top: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  box-shadow: 10px 10px blue;
+  transition: width 4s, height 4s;
+  overflow: auto;
+ }
+ .right:hover{
+  width: 450px;
+  height: 450px;
+}
+button{
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  background-color: violet;
+  overflow: auto;
+}
+button a:hover{
+ color: black;
+background-color: pink;
+}
+.center {
+  -ms-flex: 50%;
+  flex: 50%;
+  float: center;
+  background: rgb(0, 0, 0)
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  color: black;
+  font-family: arial;
+  border-radius: 20px;
+  border-style: outset;
+  border: 2px solid grey;
+  width: 50%;
+  height: 20%;
+  margin: auto;
+}
+.center1 {
+  -ms-flex: 50%;
+  flex: 50%;
+  float: right;
+  background: rgb(0, 0, 0)
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  color: black;
+  font-family: arial;
+  border-radius: 20px;
+  border-top-width: 20px;
+  border-right-width:100px;
+  border-style: outset;
+  border: 2px solid grey;
+  width: 50%;
+  height: 250px;
+  margin: auto;
+  margin-right: 400px;
+  }
+.box {
+  float: left;
+  width: 300px;
+  border: 2px solid green;
+  padding: 50px;
+  margin: 20px;
+  box-shadow: 10px 10px blue;
+  overflow: auto;
+  background-color: white;
+}
+.boxl {
+  float: right;
+  width: 300px;
+  border: 2px solid green;
+  padding: 50px;
+  margin: 20px;
+  box-shadow: 10px 10px blue;
+  overflow: auto;
+  background-color: white;
+}
+.box2 {
+  float: center;
+  width: 300px;
+  border: 2px solid green;
+  padding: 50px;
+  margin:20px;
+  box-shadow: 10px 10px blue;
+  overflow: auto;
+  background-color: white;
+  margin-left: 550px;
+  }
+.footers {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height:50px;
+  background: linear-gradient(to bottom, #cc33ff 0%, #ff99ff 100%);
+  color: white;
+  text-align: center;
+
+  }
+footer {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  position: relative;
+  animation-name: wisp;
+  animation-duration: 5s;
+  animation-direction: reverse;
+  animation: wisp 5s linear 2s infinite alternate;
+}
+@keyframes wisp {
+    0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="side"] {
+    width: 100%;
+  }
+}
+</style>
+
+<body>
+	<div class="header">
+  		<h1>Almarez, joshua carbie D</h1>
+  		<h3>student</h3>
+	</div>
+	<footer></footer>
+	<div id = "navbar" class="menu">
+ 		<a href="index.html" class="active">Home</a>
+    <a href = "info.html">Information</a>
+    <a href="profile.html">Profile</a>
+		</div>
+	<div id = "welcome-section"class= "bodys">
+		<h1>Hi, I'm Almarez, Joshua carbie D. and i'm a Student</h1>
+		<p>I'M 1st year Student of University of Cordillera but taking a 2nd year and 3rd year subjects.</p>
+		<p>I support and share files to my fellow students in doing acvities and exam. >_-</p>
+		<footer></footer>
+	</div>
+<div><h1 style="text-align: center">My Projects</h1></div>
+	<div id = "projects" class = "project-tile">
+		<h1>Farmer experience</h1>
+		<p>I lived in Mt. Provnce and i experienced farming starting in 1st year highschool until present day</p>
+	<button>
+		<a style = "border:2px solid grey"href="almarez - resume with CCS.html">Read more</a>
+	</button>
+		<footer></footer>
+	</div>
+	<div class = "right">
+		<h1>Job Experience</h1>
+		<p>I experienced being a computershop attendant and other stuff when there is still no pandemic</p>
+	<button>
+		<a style = "border:2px solid grey"href="almarez - resume with CCS.html">list of my experience</a>
+	</button>
+		<footer></footer>
+	</div>
+	<div class = "center">
+		<h1>SKILLS</h1>
+		<p>My skills differ upon the event or problems that i encounter</p>
+	<button>
+		<a style = "border:2px solid grey"href="almarez - resume with CCS.html">List of SKILLS</a>
+	</button>
+	</div>
+	<div class = "box">
+		<h3>CONTACT NUMBER</h3>
+		<h4>09166661341</h4>
+	</div>
+	<div class = "boxl">
+		<footer></footer>
+		<h3>Email</h3>
+		<h4>almarezjoshuacarbie@gmail.com</h4>
+	</div>
+    <div id = "profile-link" class = "box2">
+    <h3> <a href = "https://github.com/lesbian-hobbit" >MY PORTFOLIO</a></h3>
+  </div>
+	<div class="footers">
+		<h1>a</h1>
+	</div>
+	<footer></footer>
+</head>
+</body>
+</html>
